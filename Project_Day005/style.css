@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo,
+.menu {
+  width: 50px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+label.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e60012;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sec {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text {
+  border-left: 10px solid #f24e6f;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+.text h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.text .p1 {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.text .p2 {
+  font-size: 1rem;
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.price {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.button-buy {
+  margin-top: 15px;
+}
+
+.button-buy button {
+  background: linear-gradient(to right, #f24e6f, #f37c4a);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.button-buy button:hover {
+  opacity: 0.9;
+}
+
+.button-buy img {
+  width: 18px;
+}
+
+.image-play {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.image-play::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to bottom right, #ff6b81, #ffafbd);
+  width: 950px;
+  height: 340px;
+  border-radius: 20px;
+  z-index: 0;
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+.controller {
+  width: 400px;
+  position: relative;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.add {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.add::before {
+  content: "+";
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  transition: background 0.3s ease;
+}
+
+.add:hover::before {
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer img {
+  width: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  section {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .image-play {
+    width: 90%;
+    margin: 0 20px;
+    position: relative;
+  }
+
+  .image-play::before {
+    height: 280px;
+    width: 100%;
+    left: 80%;
+    transform: translateX(-50%);
+    margin: 0;
+    border-radius: 20px;
+  }
+
+  .controller {
+    width: 80%;
+    max-width: 400px;
+    transform: translateX(-40%);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .add {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f24e6f;
+    padding: 10px;
+    z-index: 10;
+  }
+
+  nav ul li a {
+    color: white;
+  }
+
+  label.menu-toggle {
+    display: block;
+  }
+
+  #menu-toggle:checked + label + ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h2 {
+    font-size: 2rem;
+  }
+
+  .text .p1 {
+    font-size: 1rem;
+  }
+
+  .text .p2 {
+    font-size: 0.9rem;
+  }
+
+  .controller {
+    width: 90%;
+  }
+
+  .image-play::before {
+    height: 200px;
+  }
+}

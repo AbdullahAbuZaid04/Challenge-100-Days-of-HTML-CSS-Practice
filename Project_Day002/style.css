@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#01022d,#000);
+}
+
+.container {
+    width: 90%;
+    height: 640px;
+    background-image: linear-gradient(to right,#01022de5 30%,#00000088),url(avatar.png);
+    background-position: center;
+}
+
+.container:hover {
+    background-image: linear-gradient(to right,#01022de5 30%,transparent),url(avatar.png);
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.container .header .logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.container .header nav {
+    width: 60%;
+}
+
+.container .header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .header ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.container .header ul li a:hover {
+    border-color: white;
+}
+
+.container .section {
+    width: 50%;
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+}
+
+.container .section .text h2 {
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: 2px;
+}
+
+.container .section .text p {
+    font-size: 18px;
+    letter-spacing: 3px; 
+    width: 350px;  
+    padding: 20px 0; 
+}
+
+.container .section .button button{
+    border-radius: 10px;
+    font-size: 30px;
+    font-style: italic;
+    padding: 6px 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.container .section .button button:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container .section .text h2 {
+        font-size: 50px;
+    }
+
+    .container .section .text p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .container .section {
+        flex-direction: column;
+        align-items: center;
+    }
+}

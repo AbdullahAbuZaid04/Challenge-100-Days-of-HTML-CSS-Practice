@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
+
+section {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+header nav a.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: red;
+}
+
+section .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+section .content .text {
+    color: white;
+    width: 40%;
+}
+
+section .content .text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+section .content .text p {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+section .content .image {
+    width: 40%;
+}
+
+section .content .image img {
+    width: 400px;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 950px) {
+    section .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    section .content .text,
+    section .content .image {
+        width: 100%;
+    }
+
+    body::after {
+        clip-path: circle(50% at bottom);
+    }
+}
+
+/* Small Phones */
+@media (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    header nav a.logo {
+        font-size: 24px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    section .content .text h2 {
+        font-size: 28px;
+    }
+
+    section .content .text p {
+        font-size: 14px;
+    }
+
+    section .content .image img {
+        max-width: 250px;
+    }
+}

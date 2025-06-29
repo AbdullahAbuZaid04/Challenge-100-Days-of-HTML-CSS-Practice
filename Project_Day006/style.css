@@ -1,0 +1,253 @@
+/*  عام */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #2d3047;
+  color: white;
+}
+
+.contaner {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* الهيدر */
+header {
+  padding: 20px 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li.logo img {
+  width: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li.active a {
+  color: #00e1ff;
+}
+
+nav ul li a:hover {
+    color: #00e1ff;
+}
+
+.sign span {
+  border: 2px solid #a74fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+}
+
+/* القسم الرئيسي */
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 60px 40px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.text {
+  max-width: 500px;
+}
+
+.text .first {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text .second {
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* زر التشغيل */
+.play {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.play-btn-inner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #a74fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: #00e1ff;
+}
+
+small {
+  color: #00e1ff;
+}
+
+/* الصورة */
+.photo img {
+  width: 400px;
+}
+/* الفوتر الأساسي */
+footer {
+  position: relative;
+  width: 100%;
+background: linear-gradient(to right, #db1bf6, #19d7f8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  color: white;
+}
+
+/* روابط الفوتر */
+footer .quick-links ul,
+footer .social-icons ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* العناصر داخل quick-links */
+footer .quick-links ul li {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 25px;
+  text-align: center;
+  color: white;
+}
+
+footer .quick-links ul li i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+footer .quick-links ul li p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* الأيقونات الاجتماعية */
+footer .social-icons ul li {
+  margin-left: 15px;
+}
+
+footer .social-icons ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+footer .social-icons ul li a:hover {
+  background-color: white;
+  color: #db1bf6;
+}
+
+
+/*  Media Queries */
+
+/* للأجهزة اللوحية (تابلت) */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+
+  .text .first {
+    font-size: 26px;
+  }
+
+  .photo img {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 30px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .quick-links ul,
+  footer .social-icons ul {
+    justify-content: center;
+  }
+}
+
+/* للجوالات الصغيرة */
+@media (max-width: 480px) {
+  .text .first {
+    font-size: 22px;
+  }
+
+  .text .second {
+    font-size: 14px;
+  }
+
+  .play-btn-inner {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .sign span {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  nav ul li.logo img {
+    width: 25px;
+  }
+
+  .photo img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+header {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.logo {
+    color: #000;
+    font-size: 24px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #fc6040;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #777;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fc6040;
+    transition: width 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+    color: #fc6040;
+}
+
+nav a.active::before,
+nav a:hover::before {
+    width: 100%;
+}
+
+section {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.text {
+    flex: 1;
+}
+
+.text h2 {
+    font-size: 30px;
+    color: #fc6040;
+    margin-bottom: 10px;
+}
+
+.text h1 {
+    font-size: 50px;
+    color: #f8afa1;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text p {
+    color: #777;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.img img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: border-radius 0.5s ease;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.fa-brands {
+    color: #777;
+    font-size: 20px;
+    transition: all 0.7s ease;
+}
+
+.fa-brands:hover {
+    color: #fc6040;
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .icons {
+        justify-content: center;
+    }
+
+    .img img {
+        width: 200px;
+        height: 200px;
+    }
+}
+

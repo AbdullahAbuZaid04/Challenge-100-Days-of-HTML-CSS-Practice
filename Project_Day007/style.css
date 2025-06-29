@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+.contanier {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffeef8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    padding: 10px 15px;
+    z-index: 1;
+}
+
+nav ul li a::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    background: #d9f688;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 8px 8px ; 
+    transition: height 0.5s ease-out;
+}
+
+nav ul li a:hover::before {
+    height: 100px;
+}
+
+.menu {
+    width: 50px;
+}
+
+.section {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+.text h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.text a {
+    text-decoration: none;
+    color: black;
+    background: #d9f688;
+    padding: 10px 30px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.text a:hover {
+    background: #b0b690;
+}
+
+.imges {
+    position: relative;
+    height: 80vh;
+}
+
+.pho1 {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.pho2 {
+    width: 280px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    border-radius: 8px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu {
+        display: block;
+    }
+
+    nav ul li a:hover::before {
+        height: 75%;
+    }
+    
+    .section {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .col {
+        flex-basis: 100%;
+    }
+    
+    .text h1 {
+        font-size: 30px;
+    }
+    
+    .imges {
+        height: 300px;
+        margin-top: 50px;
+    }
+    
+    .pho1 {
+        width: 250px;
+    }
+    
+    .pho2 {
+        width: 150px;
+    }
+}
