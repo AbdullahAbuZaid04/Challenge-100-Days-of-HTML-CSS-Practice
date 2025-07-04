@@ -483,6 +483,18 @@ section.home {
         margin-left: 15px;
         margin-right: 15px;
     }
+
+
+    .home-content {
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+
+    }
+    
+    .home-content h1 {
+        font-size: 1.5rem;
+    }
     
     .services {
         grid-template-columns: 1fr;
