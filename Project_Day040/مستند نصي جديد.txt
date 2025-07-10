@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Day 040 | Travel</title>
+</head>
+<body>
+    <section class="hero">
+        <div class="contanier">
+            <header>
+                <div class="logo">
+                    <h3><a href="#">Travel</a></h3>
+                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Rooms</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li class="btn"><a href="#">Book Now</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="banner">
+                <div class="text">
+                    <h2>TOURS FROM ALAQSA</h2>
+                    <h1>Santorini <br> Holidays</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Possimus fuga quis aliquid aperiam. Quod, qui!</p>
+                    <button type="button">Learn More</button>
+                </div>
+                <div class="connect">
+                    <p>Follow Us On Social Media</p>
+                    <div class="social">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+-------------------------------------------------------------------------
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)) , url(pic.jpg);
+    background-position: cente center;
+    background-size: cover;
+    position: relative;
+}
+
+.contanier {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 40px 0 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.logo h3 a {
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li a {
+    margin-left: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.navbar li:first-child a {
+    border-bottom: 2px solid red;
+}
+
+.navbar li:not(:last-child) a:hover,
+.navbar li:not(:last-child) a:focus {
+    border-bottom: 2px solid red;
+}
+
+.navbar li:last-child a {
+    border: 2px solid red;
+    padding: 15px;
+}
+
+.navbar li:last-child:hover a {
+    background-color: red;
+}
+
+.banner {
+    padding-top: 200px;
+}
+
+.text {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.text h2 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.text h1 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 15px 0 15px;
+}
+
+.text p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    background-color: red;
+    padding: 15px;
+    color: white;
+    line-height: 1.1;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.connect {
+    margin-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.connect p {
+    margin-right: 60px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    position: relative;
+}
+
+.connect p::after {
+    content: "";
+    position: absolute;
+    border: 1px solid red;
+    width: 25px;
+    top: 50%;
+    right: -43px;
+}
+
+.connect .social a {
+    display: inline-block;
+    margin-right: 15px;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.connect .social a:hover {
+    transform: rotate(360deg);
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .banner {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar li a {
+        margin-left: 25px;
+    }
+    
+    .text h1 {
+        font-size: 40px;
+    }
+    
+    .connect p {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    .navbar {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navbar li {
+        margin: 0 10px 10px;
+    }
+    
+    .navbar li a {
+        margin-left: 0;
+    }
+    
+    .banner {
+        padding-top: 100px;
+        text-align: center;
+    }
+    
+    .text h1 {
+        font-size: 35px;
+    }
+    
+    .connect {
+        justify-content: center;
+        margin-top: 70px;
+    }
+    
+    .connect p {
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .navbar li a {
+        display: block;
+        padding: 10px;
+    }
+    
+    .navbar li:last-child a {
+        display: inline-block;
+    }
+    
+    .text h1 {
+        font-size: 30px;
+    }
+    
+    .text h2 {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    
+    .text p {
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .connect {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .connect p {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .connect p::after {
+        display: none;
+    }
+    
+    .connect .social a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .text h1 {
+        font-size: 25px;
+    }
+    
+    .text h2 {
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
