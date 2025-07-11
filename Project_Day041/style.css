@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #28201E;
+    --second-bg-color: #1E1816;
+    --text-color: #EDE0D4;
+    --second-color: #B0A69D;
+    --main-color: #8B5E3C;
+    --big-font: 5rem;
+    --h5-font: 1rem;
+    --p-font: 1.1rem;
+    --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 10%;
+    transition: var(--transition);
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+    animation: zoomIn 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    transition: var(--transition);
+    animation: slideInDown 0.7s ease-out forwards;
+    opacity: 0;
+}
+
+.navbar a:nth-child(1) { animation-delay: 0.6s; }
+.navbar a:nth-child(2) { animation-delay: 0.7s; }
+.navbar a:nth-child(3) { animation-delay: 0.8s; }
+.navbar a:nth-child(4) { animation-delay: 0.9s; }
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.btn-sign {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 10px 25px;
+    border-radius: 8px;
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.btn-sign:hover {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    transform: translateY(-10px);
+}
+
+.menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.1s;
+    opacity: 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('img/bg.png') no-repeat center center/cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 10%;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    left: 5%;
+    z-index: 1;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 25px;
+    margin-bottom: 18px;
+    transition: var(--transition);
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.social-links a:nth-child(1) { animation-delay: 1.2s; }
+.social-links a:nth-child(2) { animation-delay: 1.3s; }
+.social-links a:nth-child(3) { animation-delay: 1.4s; }
+
+.social-links a:hover {
+    color: var(--main-color);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.home-content {
+    z-index: 1;
+}
+
+.home-content h5 {
+    font-size: var(--h5-font);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+.home-content h1 {
+    font-size: var(--big-font);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--main-color);
+    animation: slideInLeft 1.2s ease-out forwards;
+    animation-delay: 1.7s;
+    opacity: 0;
+}
+
+.home-content p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 500px;
+    animation: slideInLeft 1.4s ease-out forwards;
+    animation-delay: 1.9s;
+    opacity: 0;
+}
+
+.action-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    animation: slideInUp 1.6s ease-out forwards;
+    animation-delay: 2.1s;
+    opacity: 0;
+}
+
+.btn-order {
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.btn-order:hover {
+    transform: scale(1.1);
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.price span {
+    font-size: var(--p-font);
+    color: var(--second-color);
+    margin-left: 10px;
+}
+
+.home-img {
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    animation: zoomIn 1.5s ease-out forwards, floatImage 4s ease-in-out infinite 1.5s;
+    animation-delay: 2.3s;
+    opacity: 0;
+}
+
+.home-img img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+@media (max-width: 1300px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    :root {
+        --big-font: 4.5rem;
+        --h5-font: 1rem;
+    }
+
+    .social-links {
+        left: 2%;
+    }
+}
+
+@media (max-width: 1080px) {
+
+    .home {
+        height: 100vh;
+        padding: 80px 5% 40px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home-content {
+        order: 1;
+        margin: 0 auto;
+    }
+
+    .home-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-img {
+        order: 2;
+        margin-bottom: 40px;
+    }
+
+    .home-img img {
+        max-width: 250px;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .action-btns {
+        justify-content: center;
+    }
+
+    .home-content h5,
+    .home-content h1,
+    .home-content p,
+    .action-btns,
+    .home-img,
+    .header,
+    .logo img,
+    .btn-sign,
+    .navbar a,
+    .menu-icon,
+    .social-links a {
+        animation: fadeIn 0.8s ease-out forwards;
+        animation-delay: 0s !important;
+        opacity: 0;
+    }
+    .home-img {
+        animation: fadeIn 0.8s ease-out forwards, floatImage 4s ease-in-out infinite 0.8s;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: relative;
+        z-index: 10002;
+    }
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(44, 35, 31, 0.95);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        transition: var(--transition);
+        text-align: center;
+        z-index: 10001;
+    }
+    .navbar a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    #menu-toggle:checked ~ .navbar {
+        left: 0;
+        right: auto;
+    }
+    .home-content h5 {
+        font-size: 1rem;
+    }
+    .home-content h1 {
+        font-size: 2rem;
+    }
+    .home-content p {
+        font-size: 1rem;
+    }
+    .btn-order {
+        padding: 12px 25px;
+    }
+    .price {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 4%;
+    }
+    .logo img {
+        max-width: 90px;
+    }
+    .home-content h5 {
+        font-size: 1rem;
+    }
+    .home-content h1 {
+        font-size: 2rem;
+    }
+    .action-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-order {
+        width: 90%;
+        text-align: center;
+    }
+    .price {
+        font-size: 1.5rem;
+    }
+}
